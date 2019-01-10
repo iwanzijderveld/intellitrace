@@ -1,0 +1,34 @@
+{
+    "name": "insanetlabs/intellitrace",
+    "description": "Plugin for website visitor tracing",
+    "license": "MIT",
+    "authors": [{
+        "name": "Iwan van Zijderveld",
+        "email": "iwanzijderveld@gmail.com"
+    }],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.0",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Insanetlabs\\IntelliTrace\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Insanetlabs\\IntelliTrace\\IntelliTraceServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php artisan migrate"
+        ],
+        "post-update-cmd": [
+            "php artisan migrate"
+        ]
+    }
+}
