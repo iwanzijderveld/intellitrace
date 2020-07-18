@@ -1,8 +1,10 @@
-<?php namespace Insanetlabs\IntelliTrace\Controllers\Auth;
+<?php
+
+namespace Insanetlabs\IntelliTrace\Controllers\Auth;
 
 use Illuminate\Support\Facades\Password;
+use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
-use insanet\Http\Controllers\Controller as BaseController;
 
 class ForgotPasswordController extends BaseController
 {

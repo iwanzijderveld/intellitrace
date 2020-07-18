@@ -1,9 +1,10 @@
-<?php namespace Insanetlabs\IntelliTrace\Controllers\Auth;
+<?php
+
+namespace Insanetlabs\IntelliTrace\Controllers\Auth;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
-use insanet\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Insanetlabs\IntelliTrace\Mails\WelcomeMail;
@@ -14,7 +15,7 @@ class RegisterController extends BaseController
 {
     use RegistersUsers;
 
-   /*
+    /*
     |--------------------------------------------------------------------------
     | Register Controller
     |--------------------------------------------------------------------------
@@ -90,4 +91,3 @@ class RegisterController extends BaseController
         return view('intellitrace::auth.first-time-setup');
     }
 }
-?>

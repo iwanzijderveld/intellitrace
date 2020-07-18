@@ -1,10 +1,12 @@
-<?php namespace Insanetlabs\IntelliTrace\Controllers\Auth;
+<?php
+
+namespace Insanetlabs\IntelliTrace\Controllers\Auth;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Foundation\Auth\ResetsPasswords;
-use insanet\Http\Controllers\Controller as BaseController;
+use Illuminate\Routing\Controller as BaseController;
 
 class ResetPasswordController extends BaseController
 {
