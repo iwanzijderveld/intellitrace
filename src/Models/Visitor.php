@@ -1,8 +1,12 @@
-<?php namespace Insanetlabs\IntelliTrace\Models;
+<?php
+
+namespace Insanetlabs\IntelliTrace\Models;
+
 /**
  * @author Iwan van Zijderveld <iwanzijderveld@gmail.com>
  * @package category
  */
+
 use GuzzleHttp\Client;
 use Illuminate\Database\Eloquent\Model;
 
