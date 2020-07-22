@@ -41,7 +41,7 @@ class Visitor extends Model
     {
 
         $data = $this->parseURLJSON();
-        dd($data);
+
         $this->isp = $data->isp;
         $this->organisation = $data->org;
         $this->latitude = $data->lat;
