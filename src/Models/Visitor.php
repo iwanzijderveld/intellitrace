@@ -37,8 +37,7 @@ class Visitor extends Model
     {
 
         $data = $this->parseURLJSON();
-
-
+        dd($data);
         $this->isp = $data->isp;
         $this->organisation = $data->org;
         $this->latitude = $data->lat;
@@ -51,7 +50,7 @@ class Visitor extends Model
     /**
      * Get data from remote URL
      * For more info look at: http://ip-api.com/docs/api:json
-     * 
+     *
      * @return JSON
      */
     public function parseURLJSON()
