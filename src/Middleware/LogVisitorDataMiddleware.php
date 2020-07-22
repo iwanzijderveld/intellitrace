@@ -1,10 +1,12 @@
-<?php namespace Insanetlabs\IntelliTrace\Middleware;
+<?php
+
+namespace Insanetlabs\IntelliTrace\Middleware;
 
 use Closure;
 use Carbon\Carbon;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Insanetlabs\IntelliTrace\Models\Visitor;
-use Illuminate\Support\Str;
 
 class LogVisitorDataMiddleware
 {
@@ -19,12 +21,12 @@ class LogVisitorDataMiddleware
     public function handle(Request $request, Closure $next)
     {
         if (!Str::contains($request->url(), ['intellitrace'])) {
-        //Save the visitor in the database
+            //Save the visitor in the database
             $visitor = new Visitor();
-            $visitor->ip = $request->getClientIp();
+            $visitor->ip = $request->ip();
             $visitor->date = Carbon::now()->format('Y-m-d');
 
-        // GET IP data from API
+            // GET IP data from API
             $visitor->fillDataFromIP();
 
             $visitor->save();
