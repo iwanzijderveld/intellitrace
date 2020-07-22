@@ -4,7 +4,7 @@ namespace Insanetlabs\IntelliTrace\Models;
 
 /**
  * @author Iwan van Zijderveld <iwanzijderveld@gmail.com>
- * @package category
+ * @package insanetlabs/intellitrace
  */
 
 use GuzzleHttp\Client;
@@ -41,7 +41,7 @@ class Visitor extends Model
     {
 
         $data = $this->parseURLJSON();
-
+        dd($data);
         $this->isp = $data->isp;
         $this->organisation = $data->org;
         $this->latitude = $data->lat;
