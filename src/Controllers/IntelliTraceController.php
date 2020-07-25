@@ -22,7 +22,7 @@ class IntelliTraceController extends BaseController
     public function dashboard()
     {
         $data = array(
-            'visitors' => Visitor::where([['timestamp', '>=', date('Y-m-d')]])->orderBy('ip')->get()
+            'visitors' => Visitor::where([['timestamp', '>=', date('Y-m-d')]])->orderBy('ip')->get()->unique('ip')
         );
 
         return view('intellitrace::maps', $data);
